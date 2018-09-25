@@ -1,0 +1,10 @@
+applications:
+- name: app-bones
+  memory: 640M
+  path: target/release/app.jar
+  buildpack: java_buildpack
+  health-check-type: none
+  no-route: true
+  env:
+    JBP_CONFIG_JAVA_MAIN: '{ arguments: "config/app.yml" }'
+
